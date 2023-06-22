@@ -1,20 +1,24 @@
+import 'package:flutter/material.dart ';
+import 'package:hello_world/Loginscreen.dart';
 
 
-import 'package:flutter/material.dart';
 void main(){
-  runApp(new MyApp());
+  runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "MyApp",
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text("HOMEPAGE"),
-        ),
-        body: new Center(child: new Text("Hello World")),
-      ),
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+
+      home: const Loginscreen(),
     );
   }
 }
+
+
+
+
