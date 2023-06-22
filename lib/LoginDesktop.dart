@@ -18,6 +18,7 @@ class _LoginDesktopState extends State<LoginDesktop> {
               child:Image.asset('asset/nature.jpg',fit: BoxFit.cover,)
           ),
           Expanded(child: Container(
+            color: Colors.black12,
               constraints: BoxConstraints(maxWidth: 21),
               padding: EdgeInsets.symmetric(horizontal: 50.0),
               child: Column(
@@ -29,13 +30,17 @@ class _LoginDesktopState extends State<LoginDesktop> {
                   Text('Login into your Account',style: TextStyle(fontSize: 25,color: Colors.black,fontWeight: FontWeight.w700),),
                   const SizedBox(height: 35),
                   TextFormField(
-                    decoration: InputDecoration(prefixIcon: Icon(Icons.email),
+                    controller: null,
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: InputDecoration(labelText: 'Email Adress',prefixIcon: Icon(Icons.email),
                         border: OutlineInputBorder(),
-                        hintText: "Enter your Id"),
+                        hintText: "Enter your email address"),
                   ),
                   const SizedBox(height: 20),
                   TextFormField(
-                      decoration: InputDecoration(prefixIcon: Icon(Icons.password),
+                    controller: null,
+                      keyboardType: TextInputType.visiblePassword,
+                      decoration: InputDecoration(labelText: 'Password ',prefixIcon: Icon(Icons.password),
                           border: OutlineInputBorder(),
                           hintText: "Enter Password")
                   ),
@@ -50,14 +55,14 @@ class _LoginDesktopState extends State<LoginDesktop> {
 
 
                   const SizedBox(height: 30),
-                  TextButton(
+                  ElevatedButton(
                     child: Text('Login Now'),
                     onPressed: () {
 
                     },
                   ),
                   const SizedBox(height: 15),
-                  TextButton(
+                  ElevatedButton(
                     child: Text('Continue With Google',),onPressed: () {
 
                   },
